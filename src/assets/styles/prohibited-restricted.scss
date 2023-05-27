@@ -1,0 +1,321 @@
+﻿section.prohibited,
+section.restricted {
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+
+  > div:first-child {
+    text-align: center;
+  }
+
+  h4 {
+    color: $brand-color-orange;
+  }
+
+  .grid-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > li {
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+
+  .prohibited-list,
+  .restricted-list {
+    width: 85%;
+    margin: 0px auto;
+
+    @media (min-width: 400px) and (max-width: 900px) {
+      width: 300px;
+    }
+  }
+
+  .prohibited-list {
+    margin-bottom: 50px;
+  }
+
+  ul {
+    &.no-highlight {
+      > li {
+        color: inherit;
+      }
+    }
+
+    &.prohibited {
+      list-style: none;
+      padding-left: 0;
+
+      > li {
+        display: flex;
+        align-items: center;
+        color: inherit;
+        width: 300px;
+        min-width: 250px;
+
+        &:before {
+          content: '';
+          position: relative;
+          display: inline-block;
+          transform: scale(0.5);
+          vertical-align: middle;
+          min-width: 53px;
+        }
+
+        &.bg-fa {
+          /*margin-left: -45px;
+                    padding-right: 10px;*/
+          /*font-size: 20px;
+                    font-family: "Font Awesome 5 Free"*/
+        }
+
+        > i:before {
+          margin-left: -38px;
+          font-size: 23px;
+          color: #5e286c;
+        }
+
+        &.bg-blank:before {
+          width: 20px;
+          height: 45px;
+        }
+
+        &.bg-alcohol:before {
+          width: 20px;
+          height: 45px;
+          background: url('../../images/country-pages/restricted-sprites.png') -305px -125px;
+        }
+
+        &.bg-ammunition:before {
+          width: 30px;
+          height: 24px;
+          background: url('../../images/country-pages/restricted-sprites.png') -316px -232px;
+        }
+
+        &.bg-animals-animal-products:before {
+          width: 44px;
+          height: 48px;
+          background: url('../../images/country-pages/restricted-sprites.png') -138px -8px;
+        }
+
+        &.bg-antiques:before {
+          width: 43px;
+          height: 35px;
+          background: url('../../images/country-pages/restricted-sprites.png') -198px -133px;
+        }
+
+        &.bg-banned-chemicals:before {
+          width: 43px;
+          height: 40px;
+          background: url('../../images/country-pages/restricted-sprites.png') -257px -8px;
+        }
+
+        &.bg-bible:before {
+          width: 33px;
+          height: 45px;
+          background: url('../../images/country-pages/restricted-sprites.png') -316px -64px;
+        }
+
+        &.bg-china-politics:before {
+          width: 40px;
+          height: 38px;
+          background: url('../../images/country-pages/restricted-sprites.png') -8px -235px;
+        }
+
+        &.bg-cigarettes:before {
+          width: 40px;
+          height: 35px;
+          background: url('../../images/country-pages/restricted-sprites.png') -76px -184px;
+        }
+
+        &.bg-communication-devices:before {
+          width: 38px;
+          height: 40px;
+          background: url('../../images/country-pages/restricted-sprites.png') -316px -8px;
+        }
+
+        &.bg-e-cigarettes:before {
+          width: 56px;
+          height: 35px;
+          background: url('../../images/country-pages/restricted-sprites.png') -82px -133px;
+        }
+
+        &.bg-explosives:before {
+          width: 33px;
+          height: 50px;
+          background: url('../../images/country-pages/restricted-sprites.png') -257px -64px;
+        }
+
+        &.bg-fake-goods:before {
+          width: 43px;
+          height: 43px;
+          background: url('../../images/country-pages/restricted-sprites.png') -198px -8px;
+        }
+
+        &.bg-foodstuff:before {
+          width: 40px;
+          height: 38px;
+          background: url('../../images/country-pages/restricted-sprites.png') -64px -235px;
+        }
+
+        &.bg-gambling-devices:before {
+          width: 28px;
+          height: 30px;
+          background: url('../../images/country-pages/restricted-sprites.png') -316px -186px;
+        }
+
+        &.bg-marijuana:before {
+          width: 52px;
+          height: 50px;
+          background: url('../../images/country-pages/restricted-sprites.png') -8px -8px;
+        }
+
+        &.bg-medical-supplies:before {
+          width: 40px;
+          height: 38px;
+          background: url('../../images/country-pages/restricted-sprites.png') -120px -235px;
+        }
+
+        &.bg-money:before {
+          width: 50px;
+          height: 24px;
+          background: url('../../images/country-pages/restricted-sprites.png') -132px -184px;
+        }
+
+        &.bg-narcotics:before {
+          width: 46px;
+          height: 48px;
+          background: url('../../images/country-pages/restricted-sprites.png') -76px -8px;
+        }
+
+        &.bg-pet-cat:before {
+          width: 50px;
+          height: 43px;
+          background: url('../../images/country-pages/restricted-sprites.png') -8px -74px;
+        }
+
+        &.bg-pet-dog:before {
+          width: 58px;
+          height: 35px;
+          background: url('../../images/country-pages/restricted-sprites.png') -8px -133px;
+        }
+
+        &.bg-plants-plant-products:before {
+          width: 43px;
+          height: 45px;
+          background: url('../../images/country-pages/restricted-sprites.png') -138px -72px;
+        }
+
+        &.bg-poisons:before {
+          width: 40px;
+          height: 40px;
+          background: url('../../images/country-pages/restricted-sprites.png') -257px -130px;
+        }
+
+        &.bg-prescription-drugs:before {
+          width: 45px;
+          height: 43px;
+          background: url('../../images/country-pages/restricted-sprites.png') -74px -74px;
+        }
+
+        &.bg-real-furs:before {
+          width: 40px;
+          height: 30px;
+          background: url('../../images/country-pages/restricted-sprites.png') -257px -186px;
+        }
+
+        &.bg-seeds:before {
+          width: 35px;
+          height: 50px;
+          background: url('../../images/country-pages/restricted-sprites.png') -198px -67px;
+        }
+
+        &.bg-used-electronics:before {
+          width: 40px;
+          height: 28px;
+          background: url('../../images/country-pages/restricted-sprites.png') -176px -235px;
+        }
+
+        &.bg-weapons:before {
+          width: 52px;
+          height: 35px;
+          background: url('../../images/country-pages/restricted-sprites.png') -8px -184px;
+        }
+
+        &.bg-soil:before {
+          width: 53px;
+          height: 43px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -155px -4px;
+        }
+
+        &.bg-plants:before {
+          width: 53px;
+          height: 53px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -87px -73px;
+        }
+
+        &.bg-animal:before {
+          width: 53px;
+          height: 57px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -5px -4px;
+        }
+
+        &.bg-drug:before {
+          width: 53px;
+          height: 55px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -76px -4px;
+        }
+
+        &.bg-lottery:before {
+          width: 53px;
+          height: 45px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -166px -73px;
+        }
+
+        &.bg-Marijuana:before {
+          width: 53px;
+          height: 48px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -255px -6px;
+        }
+
+        &.bg-dangerous-toys:before {
+          width: 53px;
+          height: 51px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -9px -74px;
+        }
+
+        &.bg-switchblades:before {
+          width: 53px;
+          height: 45px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -256px -73px;
+        }
+
+        &.bg-substance:before {
+          width: 53px;
+          height: 49px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -347px -66px;
+        }
+
+        &.bg-embargoed:before {
+          width: 53px;
+          height: 41px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -337px -11px;
+        }
+
+        &.bg-fireams:before {
+          width: 53px;
+          height: 36px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -15px -212px;
+        }
+
+        &.bg-Ammunition:before {
+          width: 35px;
+          height: 27px;
+          background: url('../../images/country-pages/restricted-sprites-usa.png') -97px -211px;
+        }
+      }
+    }
+  }
+}

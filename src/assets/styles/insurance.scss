@@ -1,0 +1,10 @@
+﻿section.insurance,
+section.additional-resources {
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+
+  > div:first-child {
+    text-align: center;
+  }
+}

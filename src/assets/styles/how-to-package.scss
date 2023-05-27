@@ -1,0 +1,25 @@
+﻿section.how-to-package {
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+
+  > div:first-child {
+    text-align: center;
+  }
+
+  .row {
+    div {
+      margin-top: 40px;
+    }
+
+    div:nth-child(1) {
+      text-align: center;
+      margin: 10px auto;
+    }
+
+    img {
+      max-height: 210px;
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.btn {
+  display: inline-block;
+  background: #e78e43;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  line-height: initial;
+  outline: none;
+  transition: transform 0.2s linear;
+  font-weight: 600;
+  font-family: inherit;
+
+  &:hover {
+    background: #f7a058;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.btn-header {
+  margin: 0 5px;
+  width: 100px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12pt;
+  padding: 0;
+
+  &:hover {
+    background: lighten($brand-color-orange, 10%);
+  }
+}
+
+.btn-banner {
+  background-color: $brand-color-orange;
+  color: #efefef;
+  padding: 10px;
+  font-weight: normal;
+  font-size: 16pt;
+  border: 3px solid $brand-color-purple;
+  font-family: $country-page-font-family;
+  font-weight: 500;
+  display: block;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-left: 15px;
+
+  &:hover {
+    background: lighten($brand-color-orange, 10%);
+    border: 3px solid lighten($brand-color-purple, 20%);
+  }
+}
+
+.btn-primary {
+  background: $primary-color;
+
+  &:hover {
+    background: lighten($primary-color, 20%);
+  }
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 12px 26px;
+}

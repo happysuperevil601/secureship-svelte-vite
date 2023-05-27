@@ -1,0 +1,123 @@
+﻿@import 'variables';
+section.types-of-shipments {
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+
+  > div:first-child {
+    text-align: center;
+  }
+
+  > .intro {
+    margin-top: 20px;
+  }
+
+  > .table-of-contents {
+    margin: 30px 0px 70px 0px;
+
+    > p:last-child {
+      margin-top: 30px;
+      font-size: calc(100% + 2px);
+      font-weight: 600;
+      text-align: center;
+      /*Common Required Documents link needs to wrap on small screen devices
+                or the banner and footer don't go all the way to the end of the screen.
+                Not a problem on bigger screens so we put in a no-wrap
+            */
+      @media (min-width: 400px) {
+        > a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  > h2,
+  h3 {
+    color: $secondary-color;
+    margin-bottom: 30px;
+  }
+
+  > h5 {
+    margin-bottom: 10px;
+    /*border: 3px solid red !important;*/
+    font-weight: bold !important;
+  }
+
+  .formal-informal {
+    border-top: 1px solid #e4d9c9;
+    padding: 50px 0px;
+  }
+
+  > .subsection {
+    margin-bottom: 80px;
+
+    .doc-checklist {
+      margin-top: 30px;
+    }
+
+    > h4 {
+      text-align: left;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    > h5 {
+      text-align: left;
+      margin-bottom: 10px;
+      /*border: 3px solid red !important;*/
+      font-size: 22px;
+    }
+  }
+
+  .brdr-0 {
+    border: 0 !important;
+  }
+
+  #documents-only {
+    th,
+    td {
+      &:first-child {
+        width: 40%;
+      }
+    }
+  }
+
+  > #personal-belongings h5 {
+    text-decoration: none;
+    font-size: calc(100% + 2px);
+    /*font-weight: bold;*/
+    margin-bottom: 10px;
+
+    > u {
+      text-decoration: none;
+      border-bottom: 1px solid $country-page-text-color;
+    }
+  }
+
+  #temporary-imports {
+    th,
+    td {
+      &:first-child {
+        min-width: 120px;
+      }
+    }
+
+    table {
+      .note {
+        font-size: calc(100%);
+        font-variant: small-caps;
+      }
+    }
+  }
+
+  #permanent {
+    .brdr-0 {
+      border: 0 !important;
+    }
+  }
+
+  > .subsection:last-child {
+    margin-bottom: 0px;
+  }
+}

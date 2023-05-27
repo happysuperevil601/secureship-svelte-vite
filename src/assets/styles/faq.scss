@@ -1,0 +1,17 @@
+﻿section.faq {
+  width: 85%;
+  margin: 0 auto;
+
+  h3 {
+    font-size: calc(#{$country-page-text-content-size} + 2pt);
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  ul {
+    text-align: left;
+  }
+}

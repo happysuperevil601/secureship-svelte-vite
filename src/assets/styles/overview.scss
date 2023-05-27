@@ -1,0 +1,35 @@
+﻿@import 'variables';
+section.overview {
+  padding-top: 20px;
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+
+  > .description {
+    font-weight: unset;
+    font-size: $country-page-text-content-size;
+  }
+
+  h2 {
+    font-size: 30pt;
+    color: #333333;
+    text-align: center;
+    margin: 0px auto 20px auto;
+    max-width: 450px;
+  }
+
+  &:first-child > .description {
+    /*@media (min-width: $desktop-breakpoint) {
+                width: 60%;
+            }*/
+  }
+
+  &:nth-child(2) > .description {
+    width: 85%;
+    margin: 0 auto 20px auto;
+
+    @media (min-width: $desktop-breakpoint) {
+      width: 75%;
+    }
+  }
+}

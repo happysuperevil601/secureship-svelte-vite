@@ -1,0 +1,108 @@
+﻿@import 'variables';
+
+.wrapper .page-banner {
+  line-height: normal !important;
+  font-weight: normal !important;
+  font-family: $country-page-font-family;
+  background-position: 60% /*top*/;
+  min-height: 500px;
+  background-size: cover;
+  position: relative;
+  box-shadow: inset 0 0 0 2000px $country-page-banner-overlay;
+
+  .row {
+    margin-right: 0px;
+  }
+
+  @media (max-width: 500px) {
+    background-position: 65% top;
+  }
+
+  h1 {
+    font-size: 36pt;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 778px) {
+    h1 {
+      font-size: 30pt;
+    }
+  }
+
+  h2 {
+    font-size: 16.5pt;
+    color: white;
+    font-weight: 300 !important;
+    margin-top: 20px;
+    line-height: 35px;
+  }
+
+  .homeMainGetEstimate {
+    display: block;
+    border-radius: 7px;
+    width: 290px;
+    padding: 10px;
+    border: 2px solid $brand-color-orange;
+    background-color: $brand-color-purple;
+    color: #efefef;
+    font-weight: normal;
+    font-size: 16pt;
+    font-family: $country-page-font-family;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 15px;
+
+    &:hover {
+      background: lighten($brand-color-purple, 10%);
+      border: 2px solid lighten($brand-color-orange, 10%);
+      cursor: pointer;
+      color: white;
+    }
+  }
+  /*.logo-section {
+        margin: 60px 0px 20px 0px;
+        text-align: center;
+    }*/
+}
+
+.wrapper .banner-bottom {
+  /*height: 60px;*/
+  line-height: 60px;
+  justify-content: space-between;
+  background: #e68f40;
+  align-items: center;
+  font-size: 18px;
+
+  /* Page on load doubles the height until the Proxima Nova font is loaded.  The following line fixes this */
+  @media (min-width: 1000px) {
+    height: 60px;
+  }
+
+  .reviews {
+    color: #fff;
+    font-weight: 600;
+
+    .maxWidth {
+      max-width: $max-page-width !important;
+      width: 100%;
+      position: relative;
+      margin: 0px auto;
+    }
+
+    a {
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  .star-rating {
+    margin: 0 4px;
+
+    i {
+      margin: 0px -2px;
+      color: $brand-color-purple;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+﻿section.required-documents {
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+
+  > div:first-child {
+    text-align: center;
+  }
+
+  > div:nth-child(3) {
+    @media (max-width: 400px) {
+      /* This line ruins the position sticky of the table header :( but is required to keep the 
+                banner and footer extended to the full size of the screen
+            */
+      overflow: scroll;
+      width: 250px;
+    }
+
+    table {
+      margin-top: 50px;
+      font-size: calc(100% - 2pt);
+
+      th {
+        font-size: $country-page-text-content-size;
+        font-weight: 700;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+      }
+
+      a {
+        color: blue;
+        border-bottom: 1px solid #bbaede;
+        font-weight: 700;
+      }
+
+      tr:nth-child(odd) {
+        td:nth-child(even) {
+          background-color: #fae8d9;
+        }
+
+        td:nth-child(odd) {
+          background-color: #f5d2b4;
+        }
+      }
+
+      tr:nth-child(even) {
+        td:nth-child(odd) {
+          background-color: #fae8d9;
+        }
+
+        td:nth-child(even) {
+          background-color: #f5d2b4;
+        }
+      }
+
+      td ul {
+        @media (max-width: 500px) {
+          padding-left: 10px;
+        }
+
+        li {
+          color: #824d2d;
+        }
+      }
+
+      .fas {
+        color: #00d200 !important;
+        font-size: $country-page-text-content-size;
+      }
+    }
+  }
+}

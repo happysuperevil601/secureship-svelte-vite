@@ -1,0 +1,127 @@
+/*Floating menu to the left of the Country Page*/
+
+@import 'variables';
+.wrapper aside {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding-top: 20px;
+  height: auto;
+  line-height: initial;
+  background: initial;
+  box-shadow: none;
+
+  > nav {
+    background: initial;
+    box-shadow: none;
+    display: initial;
+    width: initial;
+
+    > ul {
+      position: absolute;
+      list-style: none;
+      padding: 0;
+      background: #fff;
+      white-space: nowrap;
+      box-shadow: none;
+      width: 200px;
+      -webkit-animation: all 0.3s ease-out;
+      -moz-animation: all 0.3s ease-out;
+      transition: all 0.3s;
+
+      @media (max-width: 993px) {
+        width: 40px;
+        overflow-x: hidden;
+      }
+
+      &:hover {
+        width: 210px;
+      }
+
+      > li > a {
+        font-size: 18px;
+        color: #e68f40;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 14px 12px;
+        display: inline-block;
+        background: #fff;
+        border-bottom: none;
+
+        i {
+          min-width: 24px;
+          text-align: center;
+        }
+
+        span {
+          color: $brand-color-purple;
+          opacity: 0.6;
+          font-size: 13pt;
+          margin-left: 6px;
+
+          &:hover,
+          &.activate {
+            opacity: 1;
+            padding-bottom: 2px;
+            border-bottom: 1px solid $brand-color-purple;
+          }
+        }
+      }
+
+      #floating-shipnow-mobile {
+        color: $brand-color-purple;
+        opacity: 1 !important;
+
+        &:hover {
+          color: lighten($brand-color-purple, 15%);
+        }
+
+        span {
+          opacity: 1 !important;
+        }
+      }
+
+      > li:last-child > a {
+        /*border: 3px solid $brand-color-orange;*/
+        border-radius: 7px;
+        margin: 5px 0px 0px 10px;
+        background-color: $brand-color-purple;
+        color: $brand-color-orange;
+        padding: 10px 12px;
+
+        &:hover {
+          background-color: lighten($brand-color-purple, 15%);
+        }
+      }
+
+      > li:last-child > a > span {
+        opacity: 1;
+        color: $brand-color-orange;
+      }
+
+      .prohibited,
+      .restricted {
+        padding: 0px;
+
+        i {
+          padding-left: 14px;
+        }
+      }
+
+      .prohibited {
+        span {
+          margin-left: 11px;
+        }
+      }
+
+      .restricted {
+        span {
+          margin-left: 42px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+﻿@import 'variables';
+section {
+  &.tracking-info {
+    h4 {
+      max-width: 600px;
+      margin: 0px auto 20px auto;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $desktop-breakpoint) {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 40px;
+        text-align: left;
+
+        > h5 {
+          width: 50%;
+          margin: 0;
+          padding: 0 25px;
+        }
+
+        > div {
+          text-align: left;
+        }
+      }
+
+      .tracking-info-preview {
+        padding: 30px 20px 20px 30px;
+        border-radius: 5px;
+        background: #f7f7f7;
+        margin: 0 auto;
+        width: 395px;
+
+        /*Tracking section needs to be shrunk even more for mobile portrait or else
+                    the banner and footer don't extend to the full size of the page
+                */
+        @media (max-width: 400px) {
+          padding: 20px 0px 15px 5px;
+          width: 300px;
+        }
+      }
+
+      .tracking-number {
+        margin-top: 10px;
+      }
+
+      .timeline {
+        position: relative;
+
+        &.viewport-visible .item:before {
+          animation: bounce-in 0.3s;
+        }
+
+        .item {
+          display: flex;
+          margin: 30px 0px;
+          position: relative;
+
+          &:before {
+            content: '\2022';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #ebebeb;
+            border-radius: 50%;
+            border: 2px solid #b7b7b7;
+            left: 146px;
+            text-align: center;
+            font-size: 32px;
+            color: #b7b7b7;
+            line-height: 21px;
+
+            @media (max-width: 400px) {
+              left: 110px;
+            }
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            height: 50px;
+            width: 0px;
+            border-left: 1px solid #b7b7b7;
+            left: 163px;
+            top: 30px;
+
+            @media (max-width: 400px) {
+              left: 127px;
+            }
+          }
+
+          &:nth-child(1) {
+            &:before {
+              animation-delay: 2.2s;
+              content: '\f00c';
+              color: #56bf63;
+              border-color: #56bf63;
+              font-family: 'Font Awesome 5 Free';
+              font-size: 14px;
+              font-weight: 900;
+              line-height: 27px;
+            }
+          }
+
+          &:nth-child(2):before {
+            animation-delay: 1.8s;
+          }
+
+          &:nth-child(3):before {
+            animation-delay: 1.6s;
+          }
+
+          &:nth-child(4):before {
+            animation-delay: 1.4s;
+          }
+
+          &:nth-child(5):before {
+            animation-delay: 1.2s;
+          }
+
+          &:nth-child(6):before {
+            animation-delay: 1s;
+            content: '\f425';
+            color: #0db0f1;
+            border-color: #0db0f1;
+            font-family: 'Font Awesome 5 Brands';
+            font-size: 14px;
+            line-height: 27px;
+          }
+
+          &:nth-child(6):after {
+            content: none;
+          }
+        }
+
+        .time {
+          width: 50%;
+          padding-right: 45px;
+          text-align: right;
+        }
+
+        .location {
+          width: 50%;
+          text-align: left;
+          margin-left: 20px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        h5 {
+          font-size: 16px;
+          margin: 0;
+          width: auto;
+          font-variant: small-caps;
+        }
+      }
+    }
+
+    .tracking-meta {
+      display: flex;
+    }
+
+    .delivery-note {
+      margin: 12px 0;
+    }
+
+    .fedex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      width: 75px;
+      height: 72px;
+      padding: 10px;
+      border-radius: 4px;
+      background: #003471;
+    }
+  }
+}

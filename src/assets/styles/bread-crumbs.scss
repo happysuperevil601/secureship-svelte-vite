@@ -1,0 +1,34 @@
+﻿@import 'variables';
+section.bread-crumbs {
+  width: 85%;
+  text-align: left;
+  text-decoration: none !important;
+  border: none;
+  padding: 20px 0px 0px 0px !important;
+  margin: 0px auto;
+
+  a {
+    text-decoration: none !important;
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: 1 px solid $brand-color-orange !important;
+    }
+  }
+
+  ol {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      display: inline;
+      color: $brand-color-orange !important;
+
+      span {
+        padding: 0px 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}
